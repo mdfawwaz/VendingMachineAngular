@@ -1,0 +1,43 @@
+<div class="vending-machine">
+
+    <h1>Welcome to the Vending Machine</h1>
+
+    <div class="product-selection">
+        <input
+            type="text"
+            placeholder="Enter Product ID"
+            [(ngModel)]="selectedProductId"
+        />
+        <button (click)="onProductSelected(selectedProductId)">Select Product</button>
+    </div>
+
+
+   <div *ngIf="selectedProduct" class="selected-product">
+        <h2>Selected Product:</h2>
+        <div class="selected-product-box">
+            <p>{{ selectedProduct.name }}</p>
+            <p>Price: ₹{{ selectedProduct.price }}</p>
+    <p>Quantity: {{ quantity }}</p>
+        </div>
+        <button (click)="calculateTotalBill()" *ngIf="selectedProduct">Calculate Total Bill</button>
+    </div>
+
+
+    <div class="product-list">
+        <h2>Available Products:</h2>
+        <ul>
+            <li *ngFor="let product of products" class="product-item">
+                <div class="product-box">
+                    <p>Id:{{ product.id }}</p>
+                    <p>{{ product.name }}</p>
+                    <p>Price: ₹{{ product.price }}</p>
+                    <p>Quantity: {{ product.quantity }}</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div *ngIf="totalBill > 0" class="total-bill">
+        <p>Total Bill: ₹{{ totalBill }}</p>
+    </div>
+</div>

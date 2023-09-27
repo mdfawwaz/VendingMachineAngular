@@ -1,0 +1,134 @@
+/* vending-machine.component.css */
+
+.vending-machine {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.product-selection input,
+.product-selection button,
+.selected-product p,
+.product-item,
+.total-bill {
+    margin: 10px;
+}
+
+.product-selection button,
+.product-item button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.product-selection button:hover,
+.product-item button:hover {
+    background-color: #0056b3;
+}
+
+.product-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.product-item {
+    background-color: #444;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.product-item p {
+    margin: 0;
+    padding: 5px;
+}
+
+.total-bill {
+    background-color: #007bff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.product-item {
+    background-color: #555;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: inline-block;
+    width: calc(33.33% - 20px); /* Distribute in three columns */
+    margin-right: 10px;
+}
+
+.product-item p {
+    margin: 0;
+    padding: 5px;
+}
+/* vending-machine.component.css */
+
+/* ... (previous CSS styles) */
+
+/* Style for individual product items */
+.product-item {
+    background-color: #555;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: inline-block;
+    width: calc(33.33% - 20px); /* Distribute in three columns */
+    margin-right: 10px;
+}
+
+/* Different colors for each product item */
+.product-item:nth-child(odd) {
+    background-color: #007bff;
+}
+
+.product-item:nth-child(even) {
+    background-color: #e83e8c;
+}
+/* vending-machine.component.css */
+
+/* Style the Calculate Bill button */
+.calculate-bill-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff; /* Blue background color */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Change button color on hover */
+  .calculate-bill-button:hover {
+    background-color: #0056b3; /* Darker blue background color on hover */
+  }
+  
+/* Style for the selected product box */
+.selected-product-box {
+    background-color: #f39c12; /* Different color for selected product */
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* ... (other styles remain the same) */
+
+.product-item:nth-child(odd) {
+    background-color: #007bff;
+}
+
+.product-item:nth-child(even) {
+    background-color: #e83e8c;
+}
+
+.total-bill p {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0;
+}

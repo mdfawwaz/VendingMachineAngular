@@ -1,0 +1,15 @@
+<!-- product-section.component.html -->
+
+<div class="product-section">
+  <h2>Available Products:</h2>
+  <ul>
+    <li *ngFor="let product of products">
+      <div class="product-item">
+        <h3>{{ product.name }}</h3>
+        <p>Price: ${{ product.price }}</p>
+        <p>Quantity: {{ product.quantity }}</p>
+        <button [disabled]="product.id === selectedProduct" (click)="addToCart(product.id, 1)">Add to Cart</button>
+      </div>
+    </li>
+  </ul>
+</div>
